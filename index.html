@@ -3,19 +3,281 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First GitHub Website</title>
+    <title>SmarTechLabAi | Embedded Firmware & AI Solutions</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f4f4f9;
-            margin-top: 50px;
+        /* Modern Tech Aesthetic Base Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        h1 { color: #333; }
+        body {
+            background-color: #0d1117;
+            color: #c9d1d9;
+            line-height: 1.6;
+        }
+        a {
+            color: #58a6ff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Navigation Bar */
+        header {
+            background-color: #161b22;
+            padding: 1rem 5%;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #30363d;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #f0f6fc;
+        }
+        .logo span {
+            color: #58a6ff;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            color: #8b949e;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #58a6ff;
+            text-decoration: none;
+        }
+
+        /* Hero Banner Section */
+        .hero {
+            background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
+            padding: 80px 5%;
+            text-align: center;
+            border-bottom: 1px solid #30363d;
+        }
+        .hero h1 {
+            font-size: 2.8rem;
+            color: #f0f6fc;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            color: #8b949e;
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+        }
+        .cta-btn {
+            background-color: #238636;
+            color: white;
+            padding: 12px 24px;
+            font-weight: bold;
+            border-radius: 6px;
+            display: inline-block;
+            transition: background 0.2s;
+        }
+        .cta-btn:hover {
+            background-color: #2ea043;
+            text-decoration: none;
+        }
+
+        /* Core Section Grid Layouts */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        h2 {
+            font-size: 2rem;
+            color: #f0f6fc;
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: #58a6ff;
+            margin: 10px auto 0 auto;
+            border-radius: 2px;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            padding: 30px;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #58a6ff;
+        }
+        .card h3 {
+            color: #f0f6fc;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .card p {
+            color: #8b949e;
+            font-size: 0.95rem;
+        }
+
+        /* Projects Section */
+        .project-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .project-item {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            padding: 25px;
+        }
+        .project-item h3 {
+            color: #f0f6fc;
+            margin-bottom: 10px;
+        }
+        .tags {
+            margin-top: 15px;
+        }
+        .tag {
+            background-color: #21262d;
+            color: #58a6ff;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-right: 5px;
+            border: 1px solid #30363d;
+        }
+
+        /* Contact Section Form */
+        .contact-section {
+            text-align: center;
+            background-color: #161b22;
+            border-top: 1px solid #30363d;
+            border-bottom: 1px solid #30363d;
+        }
+        .contact-info p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #8b949e;
+            font-size: 0.9rem;
+        }
     </style>
 </head>
 <body>
-    <h1>Hello, World!</h1>
-    <p>Welcome to my brand new website hosted on GitHub Pages.</p>
+
+    <!-- Top Navigation Menu -->
+    <header>
+        <div class="logo">SmarTechLab<span>Ai</span></div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Introduction -->
+    <section class="hero" id="about">
+        <h1>SmarTechLabAi</h1>
+        <p>Bridging hardware architectures and artificial intelligence. We engineer highly optimized, reliable embedded firmware, robust low-level drivers, and resource-efficient Edge AI micro-solutions for next-generation smart systems.</p>
+        <a href="#contact" class="cta-btn">Discuss a Solution</a>
+    </section>
+
+    <!-- Specialized Services -->
+    <section class="container" id="services">
+        <h2>Our Core Expertise</h2>
+        <div class="services-grid">
+            <div class="card">
+                <h3>⚙️ Embedded Firmware</h3>
+                <p>Architecting production-ready, ultra-low latency C/C++ firmware. Expert implementation of bare-metal structures, multi-threaded RTOS configurations, DMA pathways, and highly optimized power management cycles.</p>
+            </div>
+            <div class="card">
+                <h3>⚡ Power & Control Logic</h3>
+                <p>Designing sophisticated low-level peripheral logic and signal conditioning configurations. Tailored solutions for high-precision communication protocols, hardware timing synchronization, and dynamic system switching modules.</p>
+            </div>
+            <div class="card">
+                <h3>🧠 Edge AI & Intelligence</h3>
+                <p>Deploying lightweight, optimized machine learning networks onto resource-constrained microcontrollers. Designing local inference pipelines for predictive monitoring, intelligent signal processing, and autonomy at the edge.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Featured Work / Projects Showcase -->
+    <section class="container" id="projects">
+        <h2>Technical Implementations</h2>
+        <div class="project-list">
+            <div class="project-item">
+                <h3>High-Efficiency Real-Time Controller Node</h3>
+                <p>Engineered low-level driver integration layer managing high-frequency hardware synchronization. Implemented precise atomic handling and direct register configuration for flawless, continuous multi-channel signal processing.</p>
+                <div class="tags">
+                    <span class="tag">Bare-Metal C</span>
+                    <span class="tag">DMA Configuration</span>
+                    <span class="tag">Hardware Timers</span>
+                </div>
+            </div>
+            <div class="project-item">
+                <h3>Edge-Optimized Machine Learning Network</h3>
+                <p>Ported and optimized specialized inference frameworks onto memory-limited computing architectures. Achieved localized real-time telemetry processing with near-zero power overhead.</p>
+                <div class="tags">
+                    <span class="tag">TinyML</span>
+                    <span class="tag">Signal Processing</span>
+                    <span class="tag">Cortex-M Optimization</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Call to Action Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2>Let's Build Something Smarter</h2>
+            <div class="contact-info">
+                <p>Looking for optimized firmware architecture, hardware integration, or edge computational models?</p>
+                <p>Reach out via GitHub or email to explore collaboration options.</p>
+                <p style="margin-top: 25px;"><a href="mailto:your-email@example.com" class="cta-btn">Email Project Inquiry</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Base Legal/Copyright Footer -->
+    <footer>
+        <p>&copy; 2026 SmarTechLabAi. All rights reserved. Powered by GitHub Pages.</p>
+    </footer>
+
 </body>
 </html>
